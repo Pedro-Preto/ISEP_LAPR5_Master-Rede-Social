@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "df2c09ae-0347-4f95-9057-adca9d0ca17d",
+		"name": "Tags",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/tag/getAll",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"tag",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/tag/id/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"tag",
+						"id",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddTag",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Description\":\"Futebol11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/tag/AddTag",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"tag",
+						"AddTag"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTag",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/tag/deleteTag/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"tag",
+						"deleteTag",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TagCloudAllConnections",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/connection/tagCloud/AllConnections",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connection",
+						"tagCloud",
+						"AllConnections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TagCloudMyConnections",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/connection/tagCloud/Me/23f0a3fe-6c03-4c79-8186-38daaa724022",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connection",
+						"tagCloud",
+						"Me",
+						"23f0a3fe-6c03-4c79-8186-38daaa724022"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TagCloudAllUserTags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/user/tagCloud/AllUsers/hey,hey,funciona,ola,ola",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"tagCloud",
+						"AllUsers",
+						"hey,hey,funciona,ola,ola"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCloudUserTags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/user/tagCloud/Me/hey,hey,funciona,ola,ola",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"tagCloud",
+						"Me",
+						"hey,hey,funciona,ola,ola"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

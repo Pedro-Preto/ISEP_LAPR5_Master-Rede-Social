@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "661eccec-d151-438d-9bbe-534f576769b0",
+		"name": "Post",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PostContent\":\"Bom dia a todos!! \"\r\n,\r\n    \"UserPosterName\":\"PP\"\r\n ,\r\n   \"PostUsersList\":[ ]  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/post/add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"post",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/post/getAll",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"post",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CommentPost",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PostId\":\"7f63ecf6-feda-41d6-b71f-bbfdac24c09e\"\r\n,\r\n    \"Username\":\"Manelzito\"\r\n,   \r\n    \"Comment\":\"Sim senhora\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/post/commentPost",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"post",
+						"commentPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMyPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/post/myPosts/PP",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"post",
+						"myPosts",
+						"PP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePost",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/post/delete/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"post",
+						"delete",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMyFriendsPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/post/getAllMyFriendsPosts/5f3cc28b-26b6-448f-97fc-a52d3dbadb01",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"post",
+						"getAllMyFriendsPosts",
+						"5f3cc28b-26b6-448f-97fc-a52d3dbadb01"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,184 @@
+<div class="container">
+  <div class="title">
+    <h1>Registration</h1>
+  </div>
+  <div class="content">
+    <div class="form">
+      <div class="user-details" style="overflow: auto">
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input type="text" placeholder="Enter your email" required [(ngModel)]="email">
+        </div>
+        <div class="input-box">
+          <span class="details">Password</span>
+          <input type="password" placeholder="Enter your password" required [(ngModel)]="pass">
+        </div>
+        <div class="input-box">
+          <span class="details">Username</span>
+          <input type="text" placeholder="Enter your username" required [(ngModel)]="userName">
+        </div>
+        <div class="input-box">
+          <span class="details">Repeat Password</span>
+          <input type="password" placeholder="Enter your password" required [(ngModel)]="passRepeated">
+        </div>
+        <div class="input-box">
+          <span class="details">Birth Date</span>
+          <input type="text" placeholder="Enter your birth date" required [(ngModel)]="birthday">
+        </div>
+        <div class="input-box">
+          <span class="details">Phone Number</span>
+          <input type="text" placeholder="Enter your number" required [(ngModel)]="phoneNumber">
+        </div>
+        <div class="input-box">
+          <span class="details">Address</span>
+          <input type="text" placeholder="Enter your address" required [(ngModel)]="address">
+        </div>
+        <div class="input-box">
+          <span class="details">Tags</span>
+          <input type="text" placeholder="Enter your tag" required [(ngModel)]="tag">
+        </div>
+
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1" (click)="genderOption('Male')">
+          <input type="radio" name="gender" id="dot-2" (click)="genderOption('Female')">
+          <input type="radio" name="gender" id="dot-3" (click)="genderOption('Other')">
+          <span class="gender-title" style="margin-left: 100%">Gender</span>
+          <div class="category">
+            <label for="dot-1" style="margin-left: 30%">
+              <span class="dot one"></span>
+              <span class="gender">Male</span>
+            </label>
+            <label for="dot-2" style="margin-left: 50%">
+              <span class="dot two"></span>
+              <span class="gender">Female</span>
+            </label>
+            <label for="dot-3" style="margin-left: 50%">
+              <span class="dot three"></span>
+              <span class="gender">Other</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="input-box">
+          <div class="dropdown">
+            <button class="dropbtn" name="dropbtn">Emotional State</button>
+            <select class="dropdown-content" name="dropdown-content" size="5"
+              onchange="this.form.dropbtn.innerHTML=this.value;" required [(ngModel)]="emotionalState"
+              style="margin-left: 35%">
+              <option>Joyful</option>
+              <option>Distressed</option>
+              <option>Hopeful</option>
+              <option>Fearful</option>
+              <option>Relieved</option>
+              <option>Disappointed</option>
+              <option>Proud</option>
+              <option>Remorseful</option>
+              <option>Grateful</option>
+              <option>Angry</option>
+            </select>
+          </div>
+        </div>
+        <div class="tabset" style="margin-left: 5%;margin-top: 3%">
+          <!-- Tab 1 -->
+          <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+          <label for="tab1">Privacy Policy</label>
+          <div class="tab-panels">
+            <section id="marzen" class="tab-panel">
+              <p class="PP_Title">MasterRedeSocial Privacy Policy</p>
+              <p class=PP_Normal>MasterRedeSocial is part of MasterRedeSocial Group. This privacy policy will explain
+                how our organization uses the personal data we collect from you when you
+                use our website. The communication of personal data is a necessary requirement for the celebration of
+                the contract, and failure to provide them does not allow the registration
+                on MasterRedeSocial. You can withdraw consent at any time, all you need to do is delete the account.</p>
+              <p class=PP_Subtitle><b>What data we collect?</b></p>
+              <p class=PP_Normal>MasterRedeSocial Group collects the following data: Personal identification as email
+                address, birth date, phone number, address and gender.</p>
+              <p class=PP_Subtitle><b>How do we collect your data?</b></p>
+              <p class=PP_Normal>You directly provide MasterRedeSocial Group with most of the data we collect. We
+                collect data and process data when:</p>
+              <UL>
+                <LI>You register yourself as user of MRS</LI>
+                <LI>When you use the functionalities of our app</LI>
+                <LI>Associate your LinkedIn or Facebook account information</LI>
+              </UL>
+              <p class=PP_Subtitle><b>How we will use your data?</b></p>
+              <p class=PP_Normal>MasterRedeSocial Group may use Personal Data for the following purposes:</p>
+              <UL>
+                <LI><b>To provide and maintain our service:</b> Including to monitor the usage of our service.</LI>
+                <LI><b>To manage Your Account:</b> To manage your registration as a user of the service. The Personal
+                  Data you provide can give you access to different functionalities
+                  of the service that are available to you as a registered user.</LI>
+                <LI><b>To contact You:</b> To contact you by email, telephone calls, SMS, or other equivalent forms of
+                  electronic communication regarding updates or informative communications
+                  related to the functionalities, products or contracted services, including the security updates, when
+                  necessary or reasonable for their implementation.</LI>
+                <LI><b>For other purposes:</b> We may use Your information for other purposes, such as data analysis,
+                  identifying usage trends, determining the effectiveness of our promotional
+                  campaigns and to evaluate and improve our Service, products, services, marketing and your experience
+                </LI>
+              </UL>
+              <p class=PP_Normal>If MasterRedeSocial Group pretend to proceed with the further processing of personal
+                data for other purpose than that for which the data were collected,
+                before such processing the MasterRedeSocial Group provide you information about that purpose and any
+                other relevant information.</p>
+              <p class=PP_Subtitle><b>How do we store your data?</b></p>
+              <p class=PP_Normal>MasterRedeSocial group securely stores your data at internal databases. Our company
+                will keep your personal data for one year. Once this time period has expired,
+                we will delete your data.</p>
+              <p class=PP_Subtitle><b>How long do we store your data?</b></p>
+              <p class=PP_Normal>MasterRedeSocial Group stores your data for a period of 1 year after de last login.</p>
+              <p class=PP_Subtitle><b>What are your data protection rights?</b></p>
+              <p class=PP_Normal>MasterRedeSocial Group would like to make sure you are fully aware of all of your data
+                protection rights. Every user is entitled to the following:</p>
+              <UL>
+                <LI><b><u>The right to access:</u></b> You have the right to request MRS for copies of your personal
+                  data. We may charge you a small fee for this service.</LI>
+                <LI><b><u>The right to rectification:</u></b> You have the right that MRS correct any information you
+                  believe is inaccurate. You also have the right to request
+                  MRS to complete information you believe is incomplete.</LI>
+                <LI><b><u>The right to erasure:</u></b> You have the right to request that MRS erase your personal data,
+                  under certain conditions.</LI>
+                <LI><b><u>The right to restrict processing:</u></b> You have the right to request yhat MRS restrict the
+                  processing of your personal data, under certain conditions.</LI>
+                <LI><b><u>The right to object to processing:</u></b> You have the right to object to MRS’s processing of
+                  tour personal data, under certain conditions.</LI>
+                <LI><b><u>The right to data portability:</u></b> You have the right to request tha MRS transfer the data
+                  ewe have collected to another organization, or directly
+                  to you, under certain conditions.</LI>
+              </UL>
+              <p class=PP_Normal>If you make a request, we have one month to respond you. If you would like to exercise
+                any of these rights, please contact us at our email:
+                <a href="mailto:lapr5.grupo43@gmail.com"><b>lapr5.grupo43@gmail.com</b></a>.
+              </p>
+              <p class=PP_Subtitle><b>Changes to our privacy policy</b></p>
+              <p class=PP_Normal>MasterRedeSocial Group keeps its privacy policy under regular review and places any
+                updates on this web page. This privacy policy was last updated on 1 January 2022.</p>
+              <p class=PP_Subtitle><b>How to contact us</b></p>
+              <p class=PP_Normal>If you have any questions about MRS’s privacy policy, the data we hold on you, or you
+                would like to exercise one of your data protection rights, please
+                do not hesitate to contact us.</p>
+              <p class=PP_Normal>Email us at: <a
+                  href="mailto:lapr5.grupo43@gmail.com"><b>lapr5.grupo43@gmail.com</b></a></p>
+            </section>
+          </div>
+        </div>
+      </div>
+      <form>
+        <div>
+          <input type="checkbox" id="accept" name="accept" (click)="iAgree()">
+          <label for="accept">&#160;I am 13 years old or older and I Agree with MasterRedeSocial Privacy Policy</label>
+        </div>
+        <div style="margin-top: 1%">
+          <input type="checkbox" id="accept1" name="accept1" (click)="AgreeWithErasePolicy()">
+          <label for="accept1">&#160;I Agree with MasterRedeSocial Erase Data Policy</label>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register" (click)="registerUser()">
+        </div>
+        <div class="signup_link">
+          Return to <a [routerLink]="['/login-page']" [queryParams]="{ id : loggedUserId }"> Login Page</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

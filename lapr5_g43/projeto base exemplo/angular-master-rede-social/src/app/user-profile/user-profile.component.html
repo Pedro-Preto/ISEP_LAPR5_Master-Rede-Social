@@ -1,0 +1,66 @@
+<div class="topMenu">
+  <div>
+    <h1>MRS</h1>
+  </div>
+  <nav class="topCenterMenu">
+    <a [routerLink]="['/home-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/home-logo.png" alt="Home Button"></a>
+    <a [routerLink]="['/game-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/game-logo.png" alt="Game Button"></a>
+    <a [routerLink]="['/leader-board-page']" [queryParams]="{ id : loggedUserId }"><img src="assets/Imgs/Logos/leader-board-logo.png" alt="LeaderBoard Button"></a>
+    <a  [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/LogosSelected/profile-logo-selected.png" alt="Profile Button" class="profileImg"></a>
+
+  </nav>
+  <nav>
+    <a (click)="logout()" [routerLink]="['/login-page']" [queryParams]="{ id : undefined }"><img src="/assets/Imgs/Logos/logout-logo.png" alt="LogOut Button" class="logOutImg"></a>
+  </nav>
+</div>
+
+<div class="page" >
+  <nav class="leftPanel">
+    <div class="profileOptions">
+      <h3>Profile Options</h3>
+      <a [routerLink]="['/edit-profile-page']" [queryParams]="{ id : loggedUserId }"><h5>• Edit Profile</h5></a>
+      <a [routerLink]="['/change-emotional-state-page']" [queryParams]="{ id : loggedUserId }"><h5>• Edit Emotional State</h5></a>
+      <a [routerLink]="['/delete-user-account-page']" [queryParams]="{ id : loggedUserId  }"><h5>• Delete Account</h5></a>
+
+    </div>
+    <div class="connectionOptions">
+      <h3>Connection Options</h3>
+      <a [routerLink]="['/make-introduction-request-page']" [queryParams]="{ id : loggedUserId }"><h5>• Make Introduction Request</h5></a>
+      <a [routerLink]="['/manage-introduction-requests-page']" [queryParams]="{ id : loggedUserId }"><h5>• Pending Introduction Requests</h5></a>
+      <a [routerLink]="['/display-user-pending-connections-page']" [queryParams]="{ id : loggedUserId }"><h5>• Pending Connection Requests</h5></a>
+      <a [routerLink]="['/suggest-users-page']" [queryParams]="{ id : loggedUserId }"><h5>• Suggested Users</h5></a>
+      <a [routerLink]="['/search-users-page']" [queryParams]="{ id : loggedUserId }"><h5>• Search Users</h5></a>
+      <a [routerLink]="['/search-users-friends-page']" [queryParams]="{ id : loggedUserId }"><h5>• Search Common Friends</h5></a>
+      <a [routerLink]="['/edit-connection-page']" [queryParams]="{ id : loggedUserId }"><h5>• View Friends</h5></a>
+      <a [routerLink]="['/view-net-up-to-level-page']" [queryParams]="{ id : loggedUserId }"><h5>• View Net</h5></a>
+      <a [routerLink]="['/connection-relation-strength-page']" [queryParams]="{ id : loggedUserId }"><h5>• Connection and Relationship Strength</h5></a>
+      <a [routerLink]="['/suggest-group-page']" [queryParams]="{ id : loggedUserId }"><h5>•Suggest Group</h5></a>
+
+    </div>
+    <div class="Posts" style="margin-top: 15px">
+      <h3>Posts</h3>
+      <a [routerLink]="['/make-post-page']" [queryParams]="{ id : loggedUserId }"><h5>• Make Post</h5></a>
+
+    </div>
+    <div class="Tags" style="margin-top: 15px">
+      <h3>Tags</h3>
+      <a [routerLink]="['/tag-cloud-manage-page']" [queryParams]="{ id : loggedUserId }"><h5>• Manage Tag Cloud</h5></a>
+
+    </div>
+  </nav>
+  <div class="profile"  >
+    <div class="information">
+      <app-user-details></app-user-details>
+    </div>
+    <h2>Posts </h2>
+    <app-posts-page ></app-posts-page>
+  </div>
+
+  <div class="connectionOptions">
+
+
+
+  </div>
+
+
+<router-outlet></router-outlet>

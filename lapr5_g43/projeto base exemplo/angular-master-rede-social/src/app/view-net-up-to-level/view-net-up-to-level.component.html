@@ -1,0 +1,51 @@
+﻿<div class="topMenu">
+  <div>
+    <h1>MRS</h1>
+  </div>
+  <nav class="topCenterMenu">
+    <a [routerLink]="['/home-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/home-logo.png" alt="Home Button"></a>
+    <a [routerLink]="['/game-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/game-logo.png" alt="Game Button"></a>
+    <a [routerLink]="['/leader-board-page']" [queryParams]="{ id : loggedUserId }"><img src="assets/Imgs/Logos/leader-board-logo.png" alt="LeaderBoard Button"></a>
+    <a [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/profile-logo.png" alt="Profile Button" class="profileImg"></a>
+  </nav>
+  <nav>
+    <a [routerLink]="['/login-page']"><img src="/assets/Imgs/Logos/logout-logo.png" alt="LogOut Button" class="logOutImg"></a>
+  </nav>
+</div>
+
+<div class="page">
+  <nav class="leftPanel">
+  </nav>
+  <div class="profile" style="overflow: scroll;height: 89%">
+    <h1>Users In Your Net</h1>
+    <div class="selectLevel">
+      <h2>Select the desired level: </h2>
+      <div class="desiredLevelDropdown">
+        <div class="dropdown">
+          <button class="dropbtn" name="dropbtn">Desired Level</button>
+          Currently Selected: {{desiredLevel}}
+          <label>
+            <select class="dropdown-content" name="dropdown-content" size="4"  onchange="this.form.dropbtn.innerHTML=this.value;" required [(ngModel)]="desiredLevel">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </div>
+    <br>
+    <button class="confirmButton" (click)="viewNetEvent()"> Confirm </button>
+    <div class="usersInNetUpToLevel">
+      <h2> Users in your Net: </h2>
+        <li *ngFor="let user of listOfUsersInNet">
+          User Name: {{user.userName.username}}
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description: {{user.description.desc}}
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone Number: {{user.phoneNumber.number}}
+        </li>
+    </div>
+  </div>
+</div>

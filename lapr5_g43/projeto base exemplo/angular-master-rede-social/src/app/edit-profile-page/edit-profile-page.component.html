@@ -1,0 +1,36 @@
+﻿<div class="topMenu">
+  <div>
+    <h1>MRS</h1>
+  </div>
+  <nav class="topCenterMenu">
+    <a [routerLink]="['/home-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/home-logo.png" alt="Home Button"></a>
+    <a [routerLink]="['/game-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/game-logo.png" alt="Game Button"></a>
+    <a [routerLink]="['/leader-board-page']" [queryParams]="{ id : loggedUserId }"><img src="assets/Imgs/Logos/leader-board-logo.png" alt="LeaderBoard Button"></a>
+    <a [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/profile-logo.png" alt="Profile Button" class="profileImg"></a>
+  </nav>
+  <nav>
+    <a (click)="logout()" [routerLink]="['/login-page']" [queryParams]="{ id : undefined }"><img src="/assets/Imgs/Logos/logout-logo.png" alt="LogOut Button" class="logOutImg"></a>
+  </nav>
+</div>
+
+<div class="page">
+  <div class="leftPanel">
+  </div>
+  <div class="profile">
+    <div class="editProfile">
+      <h1>Edit Profile</h1>
+      <div class="form">
+        <p> Change User Name: <input [(ngModel)]="userName" type="text" placeholder="New Name"> </p>
+        <p> Change Description: <input [(ngModel)]="description" type="text" placeholder="New Description"> </p>
+        <p> Change PhoneNumber: <input [(ngModel)]="phoneNumber" type="text" placeholder="New Phone Number"> </p>
+        <p> Change Address: <input [(ngModel)]="address" type="text" placeholder="New Address"> </p>
+        <p> Add Tag: <input [(ngModel)]="tag" type="text" placeholder="New Tag"> </p>
+        <p> Remove Tag: <input [(ngModel)]="removeTag" type="text" placeholder="Remove Tag"> </p>
+      </div>
+      <nav class="saveButton">
+        <button (click)="editProfile()" [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }"> Save Changes </button>
+      </nav>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

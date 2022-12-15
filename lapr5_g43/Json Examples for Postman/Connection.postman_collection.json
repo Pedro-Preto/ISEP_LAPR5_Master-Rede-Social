@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "10b9e989-7dfa-43bf-a5c6-e6d5b255404e",
+		"name": "Connection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addConnection",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"User1Id\":\"ebf47b4b-00d6-4331-870a-7cf2b8b3e8af\",\r\n    \"User1ConnectionStrength\":\"5\",\r\n    \"User1RelationStrength\":\"5\",\r\n    \"User2Id\":\"67c3db7d-eb08-42e0-8dff-e47d87535720\",\r\n    \"User2ConnectionStrength\":\"1\",\r\n    \"User2RelationStrength\":\"5\",\r\n    \"ConnectionTags\": [\"Amigos\",\"Gatos\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/connection/addConnection",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connection",
+						"addConnection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateConnectionStrength",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/connection/updateConnectionStrengthUser2/68d7909e-f0f2-4455-8179-ef82fdb59db2,2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connection",
+						"updateConnectionStrengthUser2",
+						"68d7909e-f0f2-4455-8179-ef82fdb59db2,2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/connection/id/8864ba57-5f26-497e-9b75-4bcdfcbe4166",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connection",
+						"id",
+						"8864ba57-5f26-497e-9b75-4bcdfcbe4166"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/connection/getAll",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connection",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteConnection",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/connection/delete/{id}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connection",
+						"delete",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Connection Relation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"UserId\":\"ebf47b4b-00d6-4331-870a-7cf2b8b3e8af\",\r\n\"LikeOrDislike\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/connection/updateConnectionRelationStrength/c061df27-d19e-42b3-b15a-9194b33d17ad",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connection",
+						"updateConnectionRelationStrength",
+						"c061df27-d19e-42b3-b15a-9194b33d17ad"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

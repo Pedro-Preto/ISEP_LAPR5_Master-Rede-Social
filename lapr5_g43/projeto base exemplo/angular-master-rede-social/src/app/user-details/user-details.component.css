@@ -1,0 +1,68 @@
+h1{
+  padding: 1%;
+  color: ghostwhite;
+  background: linear-gradient(120deg,#2980b9, #3E29B9);
+  border-radius: 5px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+
+li{
+  display: inline-flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 1%;
+  font-weight: bold;
+}
+
+ul{
+}
+
+.tags h2{
+  padding: 1%;
+  color: ghostwhite;
+  background: linear-gradient(120deg,#2980b9, #3E29B9);
+  border-radius: 5px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+
+.about{
+  width: 100%;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 3px;
+  padding: 10px;
+  overflow: hidden;
+  display: inline-flex;
+  color: #000000;
+  border-radius: 5px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+
+.aboutMe{
+  margin-top: 3px;
+  width: 50%;
+}
+
+.aboutMe .description {
+  display: flex;
+  margin-bottom: 3px;
+}
+
+.aboutMe .description .desc{
+  margin-left: 3px;
+  margin-top: 2px;
+}
+
+
+.moreAboutMe{
+  width: 50%;
+  display: inline-flex;
+}
+
+.info{
+  padding: 7px 0 0 10px;
+}
+
+.info p{
+  margin-bottom: 5px;
+}

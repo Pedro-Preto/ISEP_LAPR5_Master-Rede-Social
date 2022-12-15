@@ -1,0 +1,88 @@
+<div class="topMenu">
+  <div>
+    <h1>MRS</h1>
+  </div>
+  <nav class="topCenterMenu">
+    <a [routerLink]="['/home-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/home-logo.png" alt="Home Button"></a>
+    <a [routerLink]="['/game-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/game-logo.png" alt="Game Button"></a>
+    <a [routerLink]="['/leader-board-page']" [queryParams]="{ id : loggedUserId }"><img src="assets/Imgs/Logos/leader-board-logo.png" alt="LeaderBoard Button"></a>
+    <a [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/profile-logo.png" alt="Profile Button" class="profileImg"></a>
+  </nav>
+  <nav>
+    <a (click)="logout()" [routerLink]="['/login-page']" [queryParams]="{ id : undefined }"><img src="/assets/Imgs/Logos/logout-logo.png" alt="LogOut Button" class="logOutImg"></a>
+  </nav>
+</div>
+
+<div class="page">
+  <div class="leftPanel">
+  </div>
+  <div class="profilePendingConnections">
+    <div style="text-align: center;font-size: 40px;color:black;margin-top:2%  ">Make Introduction Request</div>
+    <p style="text-align: center;margin-top:0.5%;width: 100%;padding: 1%; color: ghostwhite;  background: linear-gradient(120deg,#2691d9, #8e44ad);border-radius: 5px;box-shadow: 10px 10px 15px rgba(0,0,0,0.05)"></p>
+
+        <div class="user-details" >
+          <div class="input-box" >
+                        <span class="custom-dropdown" > Intermediary user
+                            <select [(ngModel)]="userNameInter"  (change)="getIntermediaryUserFriends()">
+                             <option  *ngFor="let user of myFriends"> {{user}}</option>
+                            </select>
+                        </span>
+          </div>
+            <div class="input-box" >
+                        <span class="custom-dropdown" > Target user
+                            <select  [(ngModel)]="userNameTarget" >
+                                <option *ngFor="let user of interFriends"> {{user}}</option>
+                            </select>
+                        </span>
+            </div>
+
+          <div class="input-box">
+            <span class="details">Message to intermediate user</span>
+            <input type="text" style="margin-left: 1%" placeholder="Enter the message" required [(ngModel)]="messageToInter" >
+          </div>
+          <div class="input-box">
+            <span class="details">Message to target user</span>
+            <input type="text" style="margin-left: 1%" placeholder="Enter the message" required [(ngModel)]="messageToTarget">
+          </div>
+          <div class="input-box">
+            <span class="details">Tags</span>
+            <input type="text" style="margin-left: 1%" placeholder="Enter your tags" optional [(ngModel)]="tag">
+          </div>
+          <div class="input-box" >
+                        <span class="custom-dropdown" > Connection Strength
+                            <select [(ngModel)]="strength" >
+                                <option>-10</option>
+                                <option>-9</option>
+                                <option>-8</option>
+                                <option>-7</option>
+                                <option>-6</option>
+                                <option>-5</option>
+                                <option>-4</option>
+                                <option>-3</option>
+                                <option>-2</option>
+                                <option>-1</option>
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+
+                            </select>
+                        </span>
+          </div>
+        </div>
+
+        <div class="button" >
+          <input type="submit" value="Send request" (click)="getIdOfUserInterByUsername()" >
+        </div>
+      </div>
+    </div>
+
+<router-outlet></router-outlet>
+

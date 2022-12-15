@@ -1,0 +1,41 @@
+<div class="topMenu">
+  <div>
+    <h1>MRS</h1>
+  </div>
+  <nav class="topCenterMenu">
+    <a [routerLink]="['/home-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/home-logo.png" alt="Home Button"></a>
+    <a [routerLink]="['/game-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/game-logo.png" alt="Game Button"></a>
+    <a [routerLink]="['/leader-board-page']" [queryParams]="{ id : loggedUserId }"><img src="assets/Imgs/Logos/leader-board-logo.png" alt="LeaderBoard Button"></a>
+    <a [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/profile-logo.png" alt="Profile Button" class="profileImg"></a>
+  </nav>
+  <nav>
+    <a (click)="logout()" [routerLink]="['/login-page']" [queryParams]="{ id : undefined }"><img src="/assets/Imgs/Logos/logout-logo.png" alt="LogOut Button" class="logOutImg"></a>
+  </nav>
+</div>
+
+<div class="container">
+  <div class="title"><h1>Deny Connections</h1></div>
+  <div class="content">
+    <div class="form">
+      <div class="emotional-state-dropdown" style="margin-right:6% ">
+        <div class="dropdown">
+          <button class="dropbtn" name="dropbtn">Connections</button>
+          <label>
+            <select class="dropdown-content" name="dropdown-content" size="5"  onchange="this.form.dropbtn.innerHTML=this.value;" required [(ngModel)]="introductionRequestId" >
+             <option *ngFor="let conn of introductionRequestIdArray" >{{conn}}</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="button">
+        <input type="submit" value="Deny" (click)="getById()" >
+
+
+      </div>
+      <div class="signup_link">
+        Return to <a [routerLink]="['/manage-introduction-requests-page']" [queryParams]="{ id : loggedUserId }"> Pending Connections Page</a>
+      </div>
+    </div>
+  </div>
+</div>

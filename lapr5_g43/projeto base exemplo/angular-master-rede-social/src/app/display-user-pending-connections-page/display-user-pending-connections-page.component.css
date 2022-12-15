@@ -1,0 +1,107 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg,#94C0DC, #CADFED);
+  height: 100vh;
+  overflow: auto;
+}
+
+.topMenu{
+  height: 60px;
+  width: 100%;
+  border-bottom: 3px solid #fff0f0;
+  margin: 0;
+  padding: 15px;
+  background: linear-gradient(120deg,#2980b9, #3E29B9);
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: ghostwhite;
+}
+
+.topMenu h1{
+  text-align: left;
+}
+
+.topMenu img{
+  width: 50px;
+}
+
+.profileImg{
+  height: 46px;
+}
+
+.logOutImg{
+  margin-top: 3px;
+  height: 45px;
+}
+
+.topCenterMenu{
+  display: flex;
+  align-items: center;
+}
+
+.topCenterMenu img{
+  margin: 10px
+}
+
+.page{
+  overflow:hidden;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.leftPanel{
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 1%;
+  width: 10%;
+}
+
+
+
+.profilePendingConnections .pendingConnectionDisplay{
+
+  margin-right:1%;
+  margin-top: 1%;
+  margin-left: 1%;
+  width:auto;
+  height: auto;
+  background: #CADFED;
+  border-radius: 5px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+
+}
+.profilePendingConnections{
+  overflow:auto;
+
+
+  margin-top: 1%;
+  width: 76%;
+  height: 80%;
+  background: #CADFED;
+  border-radius: 5px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+
+}
+.confirmButton {
+  margin-top: 3%;
+  margin-left: 5%;
+  border-radius: 5px;
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+

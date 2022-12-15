@@ -1,0 +1,671 @@
+{
+	"info": {
+		"_postman_id": "c27149d7-d1fc-42d9-8774-50059f8b3769",
+		"name": "Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RegisterUser1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body returns the correct Username\", function () {\r",
+							"    pm.expect(responseJson.Username).to.eql(pm.environment.get(\"Pedro\"));\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserName\":\"PP\"\r\n    ,\r\n    \"Birthday\":\"23 June 2001\"\r\n    ,\r\n    \"EmotionalState\":\"Hopeful\"\r\n    ,\r\n    \"Gender\":\"Male\"\r\n    ,\r\n    \"Description\": \"\"\r\n    ,\r\n    \"PhoneNumber\":\"912345678\"\r\n    ,\r\n    \"Address\": \"Rua de So joao\"\r\n    ,\r\n    \"Email\":\"1@gmail.com\"\r\n    ,\r\n    \"Password\": \"Rua12345\"\r\n    ,\r\n    \"Tags\":[\"Futebol\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/user/registerUser",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"registerUser"
+					]
+				},
+				"description": "email@gmail.com"
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterUser2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body returns the correct Username\", function () {\r",
+							"    pm.expect(responseJson.UserName).to.eql(pm.environment.get(\"Patricia\"));\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserName\":\"Joana\"\r\n    ,\r\n    \"Birthday\":\"23 June 2001\"\r\n    ,\r\n    \"EmotionalState\":\"Hopeful\"\r\n    ,\r\n    \"Gender\":\"Female\"\r\n    ,\r\n    \"Description\": \"Pofessor\"\r\n    ,\r\n    \"PhoneNumber\":\"932345678\"\r\n    ,\r\n    \"Address\": \"Rua\"\r\n    ,\r\n    \"Email\":\"4@gmail.com\"\r\n    ,\r\n    \"Password\": \"12345\" \r\n    ,\r\n    \"Tags\":[\"Tenis\",\"Futebol\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/user/registerUser",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"registerUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserGroup",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body returns the correct Username\", function () {\r",
+							"    pm.expect(responseJson.UserName).to.eql(pm.environment.get(\"Patricia\"));\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserName\":\"Joana\"\r\n    ,\r\n    \"Birthday\":\"23 June 2001\"\r\n    ,\r\n    \"EmotionalState\":\"Hopeful\"\r\n    ,\r\n    \"Gender\":\"Female\"\r\n    ,\r\n    \"Description\": \"Pofessor\"\r\n    ,\r\n    \"PhoneNumber\":\"932345678\"\r\n    ,\r\n    \"Address\": \"Rua\"\r\n    ,\r\n    \"Email\":\"4@gmail.com\"\r\n    ,\r\n    \"Password\": \"12345\" \r\n    ,\r\n    \"Tags\":[\"Tenis\",\"Futebol\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/user/group/9136f206-cb93-41bf-b868-46c761533957/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"group",
+						"9136f206-cb93-41bf-b868-46c761533957",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change EmotionalState",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body returns the correct Username\", function () {\r",
+							"    pm.expect(responseJson.gender).to.eql(pm.environment.get(8));\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"EmotionalState\":\"Grateful\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/user/emotionalState/1e5d71e2-1969-4965-bd5d-c6aa662a69ff",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"emotionalState",
+						"1e5d71e2-1969-4965-bd5d-c6aa662a69ff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LogIn",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"Email\":\"1@gmail.com\",\r\n    \"Pass\":\"Rua12345\"\r\n    \r\n}\r\n\r\n    \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/user/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCurrentUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"\r",
+							"pm.test(\"User returned status 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returned User has correct UserId\", function () {\r",
+							"    pm.expect(responseJson.UserId).to.eql(pm.environment.get(\"73a22f97-4ee1-46a4-8fca-42f9e8f0a0aa\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returned User has correct Email\", function () {\r",
+							"    pm.expect(responseJson.Email).to.eql(pm.environment.get(\"email@gmail.com\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/user/currentUser",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"currentUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"console.log(pm.environment.get(\"73a22f97-4ee1-46a4-8fca-42f9e8f0a0aa\"));\r",
+							"\r",
+							"pm.test(\"User returned status 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returned User has correct UserId\", function () {\r",
+							"    pm.expect(responseJson.UserId).to.eql(pm.environment.get(\"73a22f97-4ee1-46a4-8fca-42f9e8f0a0aa\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Returned User has correct Email\", function () {\r",
+							"    pm.expect(responseJson.Email).to.eql(pm.environment.get(\"email@gmail.com\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/user/id/3ce89b95-42e3-42b2-a938-a63f197e8b64",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"id",
+						"3ce89b95-42e3-42b2-a938-a63f197e8b64"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/user/getAll",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/user/delete/301ea95b-4c91-4511-afd7-e7d1f0687c88",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"delete",
+						"301ea95b-4c91-4511-afd7-e7d1f0687c88"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LogOut",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"UserId\":\"ab1529f3-fad5-4962-9dd3-f8d4910692b9\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/user/logout",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserIdByEmail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/user/idByEmail/email451@gmail.com",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"idByEmail",
+						"email451@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditProfile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\r\n         \"Tag\":\"Basquet\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/user/editProfile/id/34c3275b-9ab5-4f72-b9bb-1bce74052eb6",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"editProfile",
+						"id",
+						"34c3275b-9ab5-4f72-b9bb-1bce74052eb6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFriends",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/user/GetFriends/Lurdes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"GetFriends",
+						"Lurdes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByKeyword",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/user/keyword/Pedro Preto",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"keyword",
+						"Pedro Preto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResgisterUserForTests",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserName\":\"Test2\"\r\n    ,\r\n    \"Birthday\":\"23 June 2001\"\r\n    ,\r\n    \"EmotionalState\":\"Hopeful\"\r\n    ,\r\n    \"Gender\":\"Male\"\r\n    ,\r\n    \"Description\": \"\"\r\n    ,\r\n    \"PhoneNumber\":\"912345678\"\r\n    ,\r\n    \"Address\": \"Rua de So joao\"\r\n    ,\r\n    \"Email\":\"teste1@gmail.com\"\r\n    ,\r\n    \"Password\": \"Rua12345\"\r\n    ,\r\n    \"Tags\":[\"Teste\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/user/registerUser",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"registerUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserFortress",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/user/GetTotalFirstLevelConnectionStrength/5f3cc28b-26b6-448f-97fc-a52d3dbadb01",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"GetTotalFirstLevelConnectionStrength",
+						"5f3cc28b-26b6-448f-97fc-a52d3dbadb01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/user/keyword/Marta",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"keyword",
+						"Marta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserNetLevel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/net/viewNet/ab1529f3-fad5-4962-9dd3-f8d4910692b9/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"net",
+						"viewNet",
+						"ab1529f3-fad5-4962-9dd3-f8d4910692b9",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCommonFriends",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/user/GetCommonFriends/Marta/PP",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"user",
+						"GetCommonFriends",
+						"Marta",
+						"PP"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

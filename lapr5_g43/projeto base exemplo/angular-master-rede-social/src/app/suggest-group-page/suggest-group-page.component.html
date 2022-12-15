@@ -1,0 +1,34 @@
+<div class="topMenu">
+  <div>
+    <h1>MRS</h1>
+  </div>
+  <nav class="topCenterMenu">
+    <a [routerLink]="['/home-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/home-logo.png" alt="Home Button"></a>
+    <a [routerLink]="['/game-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/game-logo.png" alt="Game Button"></a>
+    <a [routerLink]="['/leader-board-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/LogosSelected/leader-board-logo-selected.png" alt="LeaderBoard Button"></a>
+    <a [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/profile-logo.png" alt="Profile Button" class="profileImg"></a>
+  </nav>
+  <nav>
+    <a [routerLink]="['/login-page']"><img src="/assets/Imgs/Logos/logout-logo.png" alt="LogOut Button" class="logOutImg"></a>
+  </nav>
+</div>
+<div class="page" style="text-align: center;margin-left: 14%">
+
+  <div class="profilePendingConnections">
+    <div style="text-align: center;font-size: 40px;color:black;margin-top:2%  ">Suggested Group</div>
+    <p style="text-align: center;margin-top:0.5%;width: 100%;padding: 1%; color: ghostwhite;  background: linear-gradient(120deg,#2691d9, #8e44ad);border-radius: 5px;box-shadow: 10px 10px 15px rgba(0,0,0,0.05)"></p>
+    <label for="username">Common Tags Number:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="commonTagsNumber">
+    <button class="confirmButton" (click)="getSuggestGroup()"> Confirm </button>
+    <br>
+    <ng-container *ngFor="let pp of group">
+      <p style="text-align:center;margin-top: 1%;margin-left: 2.7%"><a style="color: #8e44ad; font-weight: bold"></a>{{pp}} </p>
+
+
+      <p style="margin-left:30%;margin-top:0.5%;width: 40%;padding: 1%; color: ghostwhite;  background: linear-gradient(120deg,#2691d9, #8e44ad);border-radius: 5px;box-shadow: 10px 10px 15px rgba(0,0,0,0.05)"></p>
+    </ng-container>
+
+
+  </div>
+</div>
+<router-outlet></router-outlet>

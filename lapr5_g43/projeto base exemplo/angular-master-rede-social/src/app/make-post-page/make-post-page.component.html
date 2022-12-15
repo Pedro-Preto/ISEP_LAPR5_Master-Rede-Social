@@ -1,0 +1,33 @@
+<div class="topMenu">
+  <div>
+    <h1>MRS</h1>
+  </div>
+  <nav class="topCenterMenu">
+    <a [routerLink]="['/home-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/home-logo.png" alt="Home Button"></a>
+    <a [routerLink]="['/game-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/game-logo.png" alt="Game Button"></a>
+    <a [routerLink]="['/leader-board-page']" [queryParams]="{ id : loggedUserId }"><img src="assets/Imgs/Logos/leader-board-logo.png" alt="LeaderBoard Button"></a>
+    <a [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/profile-logo.png" alt="Profile Button" class="profileImg"></a>
+  </nav>
+  <nav>
+    <a (click)="logout()" [routerLink]="['/login-page']" [queryParams]="{ id : undefined }"><img src="/assets/Imgs/Logos/logout-logo.png" alt="LogOut Button" class="logOutImg"></a>
+  </nav>
+</div>
+
+<div class="container">
+  <div class="title"><h1>Add Post</h1></div>
+  <div class="content">
+    <div class="form">
+      <input style="width: 99%" type="text" placeholder="Enter Post" name="email" id="email" required [(ngModel)]="content" >
+      <div style="display: flex">
+        <input style="width: 80%" type="text" placeholder="Tag" name="email" id="tag" value="reset" [(ngModel)]="tag">
+        <button style="width: 23%; margin-left: 2%;margin-top: 0.5%" class="dropbtn" name="dropbtn" (click)="addTags()">Add Tag</button>
+      </div>
+      <div class="button">
+        <input type="submit" value="Post" (click)="getById()" >
+      </div>
+      <div class="signup_link">
+        Return to <a [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }"> Profile</a>
+      </div>
+    </div>
+  </div>
+  </div>

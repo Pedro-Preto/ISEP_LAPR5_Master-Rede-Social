@@ -1,0 +1,9 @@
+{
+    "User1Id":"0c4187c7-7f03-4bde-8825-d224cd316cd6",
+    "User1ConnectionStrength":"5",
+    "User1RelationStrength":"5",
+    "User2Id":"66ba58eb-9e6d-4886-bfb1-ecb83e2f88a1",
+    "User2ConnectionStrength":"1",
+    "User2RelationStrength":"5",
+    "ConnectionTags": ["f2f91b09-270d-464d-875b-9673ecd16ce4"]
+}

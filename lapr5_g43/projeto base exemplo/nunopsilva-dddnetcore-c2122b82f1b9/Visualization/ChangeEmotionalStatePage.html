@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Emotional State</title>
+    <link rel="stylesheet" href="Css/SignUp.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <div class="title"><h1>Emotional State Update</h1></div>
+    <div class="content">
+        <form action="#">
+            <div class="user-details">
+                <div style="margin-left: 40%" class="emotional-state-dropdown">
+                    <div class="dropdown">
+                        <button class="dropbtn" name="dropbtn">Emotional State</button>
+                        <label>
+                            <select class="dropdown-content" name="dropdown-content" size="5" onchange="this.form.dropbtn.innerHTML=this.value;" required>
+                                <option>Joyful</option>
+                                <option>Distressed</option>
+                                <option>Hopeful</option>
+                                <option>Fearful</option>
+                                <option>Relieved</option>
+                                <option>Disappointed</option>
+                                <option>Proud</option>
+                                <option>Remorseful</option>
+                                <option>Grateful</option>
+                                <option>Angry</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Update">
+            </div>
+            <div class="signup_link">
+                Return to <a href="ProfilePage.html">Home Page</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

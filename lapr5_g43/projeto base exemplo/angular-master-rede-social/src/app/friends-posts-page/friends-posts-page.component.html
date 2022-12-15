@@ -1,0 +1,39 @@
+
+<ng-container *ngFor="let pp of posts">
+  <p style="margin-left: 2.7%"> <a style="color: #8e44ad; font-weight: bold"> Poster :</a> {{pp.userId}} </p>
+
+  <p style="margin-left: 2.7%"> <a style="color: #8e44ad; font-weight: bold"> Post Date :</a> {{pp.date| date: 'dd/MM/yyyy hh:mm:ss a'}} </p>
+  <br>
+  <a style="color: #8e44ad;font-weight: bold;margin-left: 3%">Post Content :</a> {{pp.content}}
+  <p></p>
+  <a style="color: #8e44ad;margin-left: 3%"> <b>Post Tags:</b> </a>
+  <tr *ngFor="let c of pp.tags">
+    <td style="margin-left: 10%">&#160;&#160;&#160;&#160;{{c.tag}} </td>
+  </tr>
+  <p></p>
+
+  <button style="margin-left: 3%" class="dropbtn" name="dropbtn" (click)="comment(pp.postId,pp.content)">Comment</button>
+  <button style="margin-left: 15%" class="dropbtn" name="dropbtn" (click)="like(pp.postId,pp.content,pp.userId)">Like</button>
+  <button style="margin-left: 2%" class="dropbtn" name="dropbtn" (click)="dislike(pp.postId,pp.content,pp.userId)">Dislike</button>
+
+  <p style="margin-left: 2.7%"> <a style="color: #8e44ad; font-weight: bold"> Likes :</a> {{pp.likes}} <a style="color: #8e44ad; font-weight: bold;margin-left: 1%"> Dislikes :</a> {{pp.dislikes}} </p>
+
+  <p style="color: #8e44ad;margin-left: 2.7%"> <b>Post Comments:</b> </p>
+  <div style="margin-left: 5%">
+    <tr *ngFor="let c of pp.comments">
+
+      <td style="white-space: pre-wrap; margin-left: 2px"> <b >UserName:</b> {{c.commentUserId}} </td>
+
+      <td style="white-space: pre-wrap"> <b>&#160;&#160;&#160;&#160;Comment:</b> {{c.commentContent}} </td>
+
+      <td style="white-space: pre-wrap"> <b>&#160;&#160;&#160;&#160;Date:</b> {{c.commentDate| date: 'dd/MM/yyyy hh:mm:ss a'}} </td>
+
+    </tr>
+  </div>
+  <p style=" margin-left:1%;margin-right:1%;padding: 1%; color: ghostwhite;  background: linear-gradient(120deg,#2691d9, #8e44ad);border-radius: 5px;box-shadow: 10px 10px 15px rgba(0,0,0,0.05)"></p>
+</ng-container>
+
+
+
+
+

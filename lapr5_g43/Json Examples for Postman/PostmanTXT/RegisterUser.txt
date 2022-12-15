@@ -1,0 +1,11 @@
+{
+    "UserName": "Pedro",
+    "Birthday": "23 June 2001",
+    "EmotionalState": "Hopeful",
+    "Gender": "Male",
+    "PhoneNumber": "912345678",
+    "Address": "bbb",
+    "Email": "email@gmail.com",
+    "Pass": "123" ,
+    "Tags":["0ce29618-afc8-46a6-afee-49b3336cb7b6"]
+}

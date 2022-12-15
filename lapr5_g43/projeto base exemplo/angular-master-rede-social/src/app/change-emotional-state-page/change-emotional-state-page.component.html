@@ -1,0 +1,49 @@
+<div class="topMenu">
+  <div>
+    <h1>MRS</h1>
+  </div>
+  <nav class="topCenterMenu">
+    <a [routerLink]="['/home-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/home-logo.png" alt="Home Button"></a>
+    <a [routerLink]="['/game-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/game-logo.png" alt="Game Button"></a>
+    <a [routerLink]="['/leader-board-page']" [queryParams]="{ id : loggedUserId }"><img src="assets/Imgs/Logos/leader-board-logo.png" alt="LeaderBoard Button"></a>
+    <a [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/profile-logo.png" alt="Profile Button" class="profileImg"></a>
+  </nav>
+  <nav>
+    <a (click)="logout()" [routerLink]="['/login-page']" [queryParams]="{ id : undefined }"><img src="/assets/Imgs/Logos/logout-logo.png" alt="LogOut Button" class="logOutImg"></a>
+  </nav>
+</div>
+
+<div class="container">
+  <div class="title"><h1>Update Emotional State</h1></div>
+  <div class="content">
+    <form action="#">
+        <div class="emotional-state-dropdown">
+          <div class="dropdown">
+            <button class="dropbtn" name="dropbtn">Emotional State</button>
+            <label>
+              <select class="dropdown-content" name="dropdown-content" size="5"  onchange="this.form.dropbtn.innerHTML=this.value;" required [(ngModel)]="emotionalState">
+                <option>Joyful</option>
+                <option>Distressed</option>
+                <option>Hopeful</option>
+                <option>Fearful</option>
+                <option>Relieved</option>
+                <option>Disappointed</option>
+                <option>Proud</option>
+                <option>Remorseful</option>
+                <option>Grateful</option>
+                <option>Angry</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      <div class="button">
+        <input type="submit" value="Update" (click)="updateEmotionalState()"  [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }">
+
+
+      </div>
+      <div class="signup_link">
+        Return to <a [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }"> Profile</a>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+{
+	"info": {
+		"_postman_id": "215f72c7-a3c6-4dd4-b902-de51353ba555",
+		"name": "LeaderBoard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/connection/LeaderBoard/Stats",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connection",
+						"LeaderBoard",
+						"Stats"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

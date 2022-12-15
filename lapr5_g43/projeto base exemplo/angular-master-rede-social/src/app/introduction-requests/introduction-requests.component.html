@@ -1,0 +1,39 @@
+
+<h2>
+
+</h2>
+<ul>
+<ng-container *ngFor="let intro of introductionRequest">
+  <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold"> Introduction Request Id:</a> {{intro.id}} </p>
+
+  <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold"> User Intermediary :</a> {{intro.userRequesterId.value}} </p>
+
+  <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold"> User Requester :</a> {{intro.userIntermediaryId.value}} </p>
+
+  <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold"> User Target :</a> {{intro.userTargetId.value}} </p>
+
+  <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold">Introduction Date:</a> {{intro.date.date| date: 'dd/MM/yyyy hh:mm:ss a'}} </p>
+
+  <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold">Message to Intermediary:</a> {{intro.messageToIntermediary.message}} </p>
+
+  <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold">Message to Target:</a> {{intro.messageToTarget.message}} </p>
+
+  <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold"> Introduction Request State:</a> {{intro.state.introductionRequestStateAttribute}} </p>
+
+   <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold"> Introduction Request Strength:</a> {{intro.connectionStrength.strength}} </p>
+
+  <div style="margin-left: 2.7%;margin-top: 1%">
+    <tr *ngFor="let c of intro.tagList">
+
+      <td style="white-space: pre-wrap;"> <b style="color: #8e44ad">Tags:</b> {{c.tagIdValue}} </td>
+    </tr>
+  </div>
+  <p style=" margin-left:1%;margin-right:1%;margin-top: 1% ;padding: 1%; color: ghostwhite;  background: linear-gradient(120deg,#2691d9, #8e44ad);border-radius: 5px;box-shadow: 10px 10px 15px rgba(0,0,0,0.05)"></p>
+</ng-container>
+
+
+
+
+
+
+

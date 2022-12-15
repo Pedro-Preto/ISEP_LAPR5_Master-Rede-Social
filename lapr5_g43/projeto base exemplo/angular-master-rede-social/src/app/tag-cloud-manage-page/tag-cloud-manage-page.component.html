@@ -1,0 +1,36 @@
+<div class="topMenu">
+  <div>
+    <h1>MRS</h1>
+  </div>
+  <nav class="topCenterMenu">
+    <a [routerLink]="['/home-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/home-logo.png" alt="Home Button"></a>
+    <a [routerLink]="['/game-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/game-logo.png" alt="Game Button"></a>
+    <a [routerLink]="['/leader-board-page']" [queryParams]="{ id : loggedUserId }"><img src="assets/Imgs/Logos/leader-board-logo.png" alt="LeaderBoard Button"></a>
+    <a [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/profile-logo.png" alt="Profile Button" class="profileImg"></a>
+  </nav>
+  <nav>
+    <a (click)="logout()" [routerLink]="['/login-page']" [queryParams]="{ id : undefined }"><img src="/assets/Imgs/Logos/logout-logo.png" alt="LogOut Button" class="logOutImg"></a>
+  </nav>
+</div>
+<div class="page">
+
+
+  <div class="profilePendingConnections" style="margin-left: 11%">
+    <div style="text-align: center;font-size: 40px;color:black;margin-top:2%  ">Manage Tag Cloud</div>
+    <p style="text-align: center;margin-top:0.5%;width: 100%;padding: 1%; color: ghostwhite;  background: linear-gradient(120deg,#2691d9, #8e44ad);border-radius: 5px;box-shadow: 10px 10px 15px rgba(0,0,0,0.05)"></p>
+
+
+    <div class="btn-group" style="width:100%;margin-top: 3%;margin-left: 15%">
+      <button style="width:33.3%" [routerLink]="['/tag-cloud-all-users-page']" [queryParams]="{ id : loggedUserId }">Tag Cloud All Users</button>
+      <button style="width:33.3%" [routerLink]="['/tag-cloud-user-page']" [queryParams]="{ id : loggedUserId }">Tag Cloud Logged User</button>
+    </div>
+
+    <div class="btn-group" style="width:100%; margin-top: 5%;margin-left: 15%">
+      <button style="width:33.3%" [routerLink]="['/tag-cloud-all-connections-page']" [queryParams]="{ id : loggedUserId }">Tag Cloud All Connections</button>
+      <button style="width:33.3%" [routerLink]="['/tag-cloud-user-connections-page']" [queryParams]="{ id : loggedUserId }">Tag Cloud Logged User Connections</button>
+    </div>
+  </div>
+
+
+
+</div>

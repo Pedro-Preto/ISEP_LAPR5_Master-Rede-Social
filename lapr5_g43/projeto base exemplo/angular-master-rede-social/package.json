@@ -1,0 +1,48 @@
+{
+  "name": "angular-master-rede-social",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^14.2.10",
+    "@angular/common": "^14.2.10",
+    "@angular/compiler": "^14.2.10",
+    "@angular/core": "^14.2.10",
+    "@angular/forms": "^14.2.10",
+    "@angular/platform-browser": "^14.2.10",
+    "@angular/platform-browser-dynamic": "^14.2.10",
+    "@angular/router": "^14.2.10",
+    "@seregpie/three.text-sprite": "^3.2.0",
+    "@seregpie/three.text-texture": "^3.2.1",
+    "@types/three": "^0.134.0",
+    "angular-tag-cloud-module": "^13.0.0",
+    "cors": "^2.8.5",
+    "rxjs": "~7.4.0",
+    "three": "^0.135.0",
+    "three-mesh-ui": "^5.3.1",
+    "three.textsprite": "^20.0.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.2.9",
+    "@angular/cli": "^14.2.9",
+    "@angular/compiler-cli": "^14.2.10",
+    "@types/cors": "^2.8.12",
+    "@types/jasmine": "~3.10.0",
+    "@types/node": "^12.11.1",
+    "jasmine-core": "~3.10.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "typescript": "~4.8.4"
+  }
+}

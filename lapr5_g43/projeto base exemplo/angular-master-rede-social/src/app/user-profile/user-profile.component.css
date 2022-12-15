@@ -1,0 +1,20 @@
+.connectionOptions{
+  margin-top: 15px;
+}
+.profile h2{
+  padding: 1%;
+  color: ghostwhite;
+  background: linear-gradient(120deg,#2980b9, #3E29B9);
+  border-radius: 5px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+
+
+.profile{
+height: 80%;
+  overflow-y:scroll;
+}
+

@@ -1,0 +1,31 @@
+<div class="page" style="margin-top: 0.5%;margin-left: 0.5%">
+  <nav class="leftPanel">
+    <a style="color: black"><strong>NetWork Size:</strong></a><b style="color: blueviolet">{{numberOfUsers}}</b>
+  </nav>
+</div>
+
+
+<div class="center">
+  <h1>Login</h1>
+  <div class="form" method="post">
+    <div class="txt_field">
+      <input type="text" required [(ngModel)]="email" >
+      <span></span>
+      <label>Email</label>
+    </div>
+    <div class="txt_field">
+      <input type="password" required [(ngModel)]="pass" >
+      <span></span>
+      <label>Password</label>
+    </div>
+    <div class="pass">Forgot Password?</div>
+    <input type="submit" value="Login" (click)="login()" >
+    <div class="signup_link">
+      Not a member?<a [routerLink]="['/register-user-page']"> Sign up</a>
+    </div>
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "2ce7ff9c-3b73-4928-8b44-c65107e0790a",
+		"name": "Prolog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ShortPath",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5002/shortPath",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"shortPath"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

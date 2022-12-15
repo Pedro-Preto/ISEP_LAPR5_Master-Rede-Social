@@ -1,0 +1,41 @@
+<div class="topMenu">
+  <div>
+    <h1>MRS</h1>
+  </div>
+  <nav class="topCenterMenu">
+    <a [routerLink]="['/home-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/home-logo.png" alt="Home Button"></a>
+    <a [routerLink]="['/game-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/game-logo.png" alt="Game Button"></a>
+    <a [routerLink]="['/leader-board-page']" [queryParams]="{ id : loggedUserId }"><img src="assets/Imgs/Logos/leader-board-logo.png" alt="LeaderBoard Button"></a>
+    <a [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/profile-logo.png" alt="Profile Button" class="profileImg"></a>
+  </nav>
+  <nav>
+    <a (click)="logout()" [routerLink]="['/login-page']" [queryParams]="{ id : undefined }"><img src="/assets/Imgs/Logos/logout-logo.png" alt="LogOut Button" class="logOutImg"></a>
+
+
+  </nav>
+</div>
+<div class="page">
+  <nav class="leftPanel">
+    <div class="profileOptions">
+      <h3>Accept Introductions</h3>
+      <button class="confirmButton" style="margin-right: 7%" [routerLink]="['/accept-introduction-request-page']" [queryParams]="{ id : loggedUserId }"> Accept Connecions </button>
+    </div>
+    <div class="connectionOptions" style="margin-top: 50%">
+      <h3>Deny Introductions</h3>
+      <button class="confirmButton"  [routerLink]="['/deny-introduction-request-page']" [queryParams]="{ id : loggedUserId }"> Deny Connecions </button>
+    </div>
+  </nav>
+
+
+  <div class="profilePendingConnections">
+    <div style="text-align: center;font-size: 40px;color:black;margin-top:2%  ">Pending Introduction Requests</div>
+    <p style="text-align: center;margin-top:0.5%;width: 100%;padding: 1%; color: ghostwhite;  background: linear-gradient(120deg,#2691d9, #8e44ad);border-radius: 5px;box-shadow: 10px 10px 15px rgba(0,0,0,0.05)"></p>
+
+<app-introduction-requests></app-introduction-requests>
+  </div>
+</div>
+
+<
+
+
+<router-outlet></router-outlet>

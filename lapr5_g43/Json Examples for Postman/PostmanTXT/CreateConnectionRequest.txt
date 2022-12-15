@@ -1,0 +1,7 @@
+{
+    "User1Id": "bb794eb9-6b5e-4dee-952e-4d2092c5ca20",
+    "User2Id": "cc558463-5acc-4921-8fe2-2098c43f501c",
+    "Message": "Test Message",
+    "TagIdList": [],
+    "ConnectionStrength": "5"
+}

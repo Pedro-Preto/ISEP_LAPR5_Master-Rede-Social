@@ -1,0 +1,46 @@
+<div class="topMenu">
+  <div>
+    <h1>MRS</h1>
+  </div>
+  <nav class="topCenterMenu">
+    <a [routerLink]="['/home-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/home-logo.png" alt="Home Button"></a>
+    <a [routerLink]="['/game-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/game-logo.png" alt="Game Button"></a>
+    <a [routerLink]="['/leader-board-page']" [queryParams]="{ id : loggedUserId }"><img src="assets/Imgs/Logos/leader-board-logo.png" alt="LeaderBoard Button"></a>
+    <a [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/profile-logo.png" alt="Profile Button" class="profileImg"></a>
+  </nav>
+  <nav>
+    <a (click)="logout()" [routerLink]="['/login-page']" [queryParams]="{ id : undefined }"><img src="/assets/Imgs/Logos/logout-logo.png" alt="LogOut Button" class="logOutImg"></a>
+  </nav>
+</div>
+
+<div class="page">
+  <nav class="leftPanel">
+  </nav>
+  <div class="profile">
+    <h1>Connection Strength and Relationship Strength</h1>
+    <div class="selectLevel">
+      <h2>Select a Friend: </h2>
+      <div class="desiredLevelDropdown">
+        <div class="dropdown">
+          <button class="dropbtn" name="dropbtn">Choose a Friend</button>
+          <strong>Currently Selected:</strong> <a style="color: #8e44ad"><strong>{{chosenFriend}}</strong></a>
+          <label>
+            <select class="dropdown-content" name="dropdown-content" size="4"  onchange="this.form.dropbtn.innerHTML=this.value;" required [(ngModel)]="chosenFriend" >
+              <option *ngFor="let user of userNames"> {{user}}</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </div>
+    <br>
+    <button class="confirmButton" (click)="getChosenFriendId()"> Confirm </button>
+    <div class="usersInNetUpToLevel">
+      <h2> Connection Details: </h2>
+      <a style="color: #8e44ad"><strong>Connection Strength:</strong></a><a>{{connectionStrength}}</a>
+      <br>
+      <br>
+      <a style="color: #8e44ad"><strong>Relation Strength:</strong></a> <a>{{connectionRelationStrength}}</a>
+    </div>
+  </div>
+</div>
+

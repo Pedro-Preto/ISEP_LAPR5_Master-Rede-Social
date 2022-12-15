@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "805ffa3a-06ea-4874-b8dc-75c28743c103",
+		"name": "ConnectionRequest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addConnectionRequest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"User1Id\": \"7b024076-dfa5-47e9-a6e8-003934fbe13a\",\r\n    \"User2Id\": \"2d146df9-8699-4365-9d11-65567f6e7aa7\",\r\n    \"Message\": \"Test Message\",\r\n    \"TagIdList\": [\"Futebol\",\"Tenis\",\"Natação\"],\r\n    \"ConnectionStrength\": \"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/connectionReq/addConnectionRequest",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connectionReq",
+						"addConnectionRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserPendingConnectionRequests",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/connectionReq/pendingConnections/6e32f946-d66b-42fe-9dbc-c88cc22cbab6",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connectionReq",
+						"pendingConnections",
+						"6e32f946-d66b-42fe-9dbc-c88cc22cbab6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateConnectionRequestState",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"Id\":\"40effe45-a908-4b70-b060-fe813f006b45\",\r\n\"StrengthUserTarget\":10,\r\n\"Tags\":[\"Amigos Chegados\"],\r\n\"ConnectionState\":\"Accepted\"\r\n}      \r\n\r\n        ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/connectionReq/updateRequest",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connectionReq",
+						"updateRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllAccepedConnectionRequests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/connectionReq/allAcceptedConnections",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connectionReq",
+						"allAcceptedConnections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllDeniedConnectionRequests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/connectionReq/allDeniedConnections",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connectionReq",
+						"allDeniedConnections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/connectionReq/id/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"connectionReq",
+						"id",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

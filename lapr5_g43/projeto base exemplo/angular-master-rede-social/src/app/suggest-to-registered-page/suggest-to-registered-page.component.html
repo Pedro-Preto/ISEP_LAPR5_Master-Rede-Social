@@ -1,0 +1,10 @@
+<div class="center">
+  <h1>Select at least one User to add to your Net</h1>
+      <div *ngFor="let user of userList">
+        <input type="checkbox"  id="addUser" name="addUser" value="addUser" (click)="addUserToList(user)">
+        <label for="addUser"> {{user.userName.username}}:&nbsp;{{user.description.desc}}</label>
+      </div>
+      <div>
+        <button  class="confirmButton" type="submit" (click)="doneEvent()"> Done </button>
+      </div>
+</div>

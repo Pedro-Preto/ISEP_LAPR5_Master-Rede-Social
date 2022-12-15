@@ -1,0 +1,30 @@
+﻿.editProfile h1{
+  padding: 1%;
+  color: ghostwhite;
+  background: linear-gradient(120deg,#2980b9, #3E29B9);
+  border-radius: 5px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+
+.profile .editProfile{
+  margin-top: 1%;
+  margin-left: 1%;
+  width: 98%;
+}
+
+.profile .form{
+  margin-top: 10px;
+  margin-left: 5px;
+  width: 98%;
+}
+
+.form p{
+  margin-top: 10px;
+}
+
+.saveButton{
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+

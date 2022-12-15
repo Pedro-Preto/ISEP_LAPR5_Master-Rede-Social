@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "38740c63-da42-43d5-8aab-07ab6d63b412",
+		"name": "Post-Node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"postId\":\"2\",\r\n    \"content\": \"New Post\",\r\n    \"date\": \"15 January 2022\",\r\n    \"userId\": \"Joao\",\r\n    \"likes\": 0,\r\n    \"dislikes\": 0,\r\n    \"comments\": [],\r\n    \"tags\":[]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/posts/61e54b24b5801af712dd4a0d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						"61e54b24b5801af712dd4a0d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment Post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"postId\":\"698755be-9601-468d-b49f-ac0648e20cea\",\r\n    \"content\": \"new Post\",\r\n    \"date\": \"15 January 2022\",\r\n    \"userId\": \"Joao\",\r\n    \"likes\": 0,\r\n    \"dislikes\": 0,\r\n    \"comments\": [{\"commentContent\": \"Funciona\", \"commentDate\": \"15 January 2022\", \"commentUserId\": \"PP\"}],\r\n    \"tags\":[{\"tag\":\"resulta\"}]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/makeComment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"makeComment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/allPosts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"allPosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"postId\":\"698755be-9601-468d-b49f-ac0648e20cea\",\r\n    \"content\": \"Garcia7\",\r\n    \"date\": \"15 January 2022\",\r\n    \"userId\": \"Joao\",\r\n    \"likes\": 0,\r\n    \"dislikes\": 0,\r\n    \"comments\": [{\"commentContent\": \"Funciona\", \"commentDate\": \"15 January 2022\", \"commentUserId\": \"PP\"}],\r\n    \"tags\":[{\"tag\":\"resulta\"}]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dislike",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"postId\":\"698755be-9601-468d-b49f-ac0648e20cea\",\r\n    \"content\": \"Garcia7\",\r\n    \"date\": \"15 January 2022\",\r\n    \"userId\": \"Joao\",\r\n    \"likes\": 0,\r\n    \"dislikes\": 0,\r\n    \"comments\": [{\"commentContent\": \"Funciona\", \"commentDate\": \"15 January 2022\", \"commentUserId\": \"PP\"}],\r\n    \"tags\":[{\"tag\":\"resulta\"}]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/dislike",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"dislike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"postId\":\"698755be-9601-468d-b49f-ac0648e20cea\",\r\n    \"content\": \"Garcia7\",\r\n    \"date\": \"15 January 2022\",\r\n    \"userId\": \"Joao\",\r\n    \"likes\": 0,\r\n    \"dislikes\": 0,\r\n    \"comments\": [{\"commentContent\": \"Funciona\", \"commentDate\": \"15 January 2022\", \"commentUserId\": \"PP\"}],\r\n    \"tags\":[{\"tag\":\"resulta\"}]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/removePost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"removePost"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

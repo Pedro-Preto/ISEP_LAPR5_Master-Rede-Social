@@ -1,0 +1,38 @@
+<div class="topMenu">
+  <div>
+    <h1>MRS</h1>
+  </div>
+  <nav class="topCenterMenu">
+    <a [routerLink]="['/home-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/home-logo.png" alt="Home Button"></a>
+    <a [routerLink]="['/game-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/game-logo.png" alt="Game Button"></a>
+    <a [routerLink]="['/leader-board-page']" [queryParams]="{ id : loggedUserId }"><img src="assets/Imgs/Logos/leader-board-logo.png" alt="LeaderBoard Button"></a>
+    <a [routerLink]="['/profile-page']" [queryParams]="{ id : loggedUserId }"><img src="/assets/Imgs/Logos/profile-logo.png" alt="Profile Button" class="profileImg"></a>
+  </nav>
+  <nav>
+    <a (click)="logout()" [routerLink]="['/login-page']" [queryParams]="{ id : undefined }"><img src="/assets/Imgs/Logos/logout-logo.png" alt="LogOut Button" class="logOutImg"></a>
+  </nav>
+</div>
+
+<div class="page" >
+<div class="profilePendingConnections" style="margin-left: 10%">
+  <div style="text-align: center;font-size: 40px;color:black;margin-top:2%  ">Suggested Users</div>
+  <p style="text-align: center;margin-top:0.5%;width: 100%;padding: 1%; color: ghostwhite;  background: linear-gradient(120deg,#2691d9, #8e44ad);border-radius: 5px;box-shadow: 10px 10px 15px rgba(0,0,0,0.05)"></p>
+
+
+  <div class="col-3">
+    <input class="effect-9" type="text" placeholder="Insert Level" [(ngModel)]="level">
+
+    <span class="focus-border"><i></i></span>
+  </div>
+<div style="margin-top: 1.5%">
+  <button class="confirmButton" style="width: 6%" (click)="start()">Select</button>
+</div>
+  <p style="text-align: center;margin-top:0.5%;width: 100%;padding: 1%; color: ghostwhite;  background: linear-gradient(120deg,#2691d9, #8e44ad);border-radius: 5px;box-shadow: 10px 10px 15px rgba(0,0,0,0.05)"></p>
+
+  <div style="margin-top: 2%">
+    <ng-container *ngFor="let user of suggestUsers" >
+      <p style="margin-top: 1%;color: #8e44ad;margin-left: 1%"><strong>{{user}}</strong></p>
+    </ng-container>
+  </div>
+</div>
+</div>

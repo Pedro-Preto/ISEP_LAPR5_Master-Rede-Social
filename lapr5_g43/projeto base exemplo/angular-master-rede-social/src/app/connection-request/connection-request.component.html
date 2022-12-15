@@ -1,0 +1,33 @@
+<h2>
+
+</h2>
+<ul>
+<ng-container *ngFor="let connections of connectionRequest">
+  <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold"> Connection Request Id:</a> {{connections.id}} </p>
+
+  <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold"> User Requester :</a> {{connections.userRequesterId.value}} </p>
+
+  <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold"> User Target :</a> {{connections.userTargetId.value}} </p>
+
+  <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold">Connection Date:</a> {{connections.date.date| date: 'dd/MM/yyyy hh:mm:ss a'}} </p>
+
+  <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold">Message:</a> {{connections.message.message}} </p>
+
+  <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold"> Connection Request State:</a> {{connections.state.connectionRequestStateAttribute}} </p>
+
+   <p style="margin-left: 2.7%;margin-top: 1%"> <a style="color: #8e44ad; font-weight: bold"> Connection Request Strength:</a> {{connections.connectionStrength.strength}} </p>
+
+  <div style="margin-left: 2.7%;margin-top: 1%">
+    <tr *ngFor="let c of connections.tags">
+
+      <td style="white-space: pre-wrap;"> <b style="color: #8e44ad">Tags:</b> {{c.tagIdValue}} </td>
+    </tr>
+  </div>
+  <p style=" margin-left:1%;margin-right:1%;margin-top: 1% ;padding: 1%; color: ghostwhite;  background: linear-gradient(120deg,#2691d9, #8e44ad);border-radius: 5px;box-shadow: 10px 10px 15px rgba(0,0,0,0.05)"></p>
+</ng-container>
+
+
+
+
+
+

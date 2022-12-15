@@ -1,0 +1,69 @@
+﻿<script src="libs/three.js"></script>
+<script src="libs/THREEx.KeyboardState.js"></script>
+<div class="page">
+  <div class="leftPanel">
+    <div class="selectLevel">
+      <div class="desiredLevelDropdown" >
+        <div class="dropdown" >
+          <button class="dropbtn" name="dropbtn" >Choose a Path</button>
+          <strong>Currently Selected:</strong><h4 style="color: #8e44ad">{{pathType}}</h4>
+          <label>
+            <select class="dropdown-content" name="dropdown-content" size="3" onchange="this.form.dropbtn.innerHTML=this.value;" required [(ngModel)]="pathType" >
+              <option value="Short Path">Short Path</option>
+              <option value="Strong Path">Strong Path</option>
+              <option value="Strong Path With Relations">Strong Path With Relations</option>
+              <option value="Secure Path">Secure Path</option>
+              <option value="Best First">Best First</option>
+              <option value="Best First With Emotional States">Best First With Emotional States</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div>
+        <p *ngIf="pathType=='Secure Path'" style="margin-left: 9%" ><strong>Insert a Value</strong></p>
+        <input style="margin-top: 2%;width: 25%;margin-left: 25%" *ngIf="pathType=='Secure Path'" type="number" [(ngModel)]="valueMin">
+
+        <p *ngIf="pathType=='Best First'" style="margin-left: 9%" ><strong>Insert a Value</strong></p>
+        <input style="margin-top: 2%;width: 25%;margin-left: 25%" *ngIf="pathType=='Best First'" type="number" [(ngModel)]="valueMin">
+
+        <p *ngIf="pathType=='Best First With Emotional States'" style="margin-left: 9%" ><strong>Insert a Value</strong></p>
+        <input style="margin-top: 2%;width: 25%;margin-left: 25%" *ngIf="pathType=='Best First With Emotional States'" type="number" [(ngModel)]="valueMin">
+
+      </div>
+      <div class="desiredLevelDropdown" style="margin-top: 4%" >
+        <div class="dropdown" >
+          <button class="dropbtn" name="dropbtn" >Choose a User</button>
+         <strong>Currently Selected:</strong><h4 style="color: #8e44ad"> {{chosenUser}}</h4>
+          <label>
+            <select class="dropdown-content" name="dropdown-content" size="4"  onchange="this.form.dropbtn.innerHTML=this.value;" required [(ngModel)]="chosenUser" >
+             <option *ngFor="let user of allUsersNames"> {{user}}</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <button class="confirmButton" style="width: 75%" (click)="drawConnectionsHighlight()"> Highlight</button>
+    </div>
+    <div class="firsPersonCamera" style="margin-top: 4%">
+      <input type="checkbox" id="first-person-view" name="first-person-view">
+      <label for="first-person-view">First Person View</label>
+    </div>
+  </div>
+  <div class="center">
+    <p id="HitMessage" style="background-color:tomato;text-align: center; color: antiquewhite; font-weight: bold;">
+
+    </p>
+    <!--<canvas #canvas id="canvas" (contextmenu)="onRightClick()" (mousedown)="onMouseDown($event)" (mouseup)="onMouseUp($event)" (mousemove)="onMouseMove($event)" (mousewheel)="mouseWheel($event)"></canvas>-->
+
+    <canvas #canvas id="canvas"  (mousemove)="onMouseMove($event)" (click)="onClick()"></canvas>
+  </div>
+
+ <p id="pop" *ngIf="popName!=undefined" style="width:auto;height: 38% " class="bubble speech">
+   <a  id="pop1"><strong style="color: #8e44ad">Name:</strong>{{popName}}</a>
+    <br>
+    <b  id="pop2"><strong style="color: #8e44ad">Tags:</strong></b>
+   <br>
+   <ng-container *ngFor="let pop of popTags">
+     <a  id="pop3">{{pop}}</a>
+     <br>
+   </ng-container>
+</div>

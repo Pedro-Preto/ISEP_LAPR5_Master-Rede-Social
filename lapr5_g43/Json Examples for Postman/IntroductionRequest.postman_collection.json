@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "e9d63bf0-129c-478b-9ea9-0a43db97c13b",
+		"name": "IntroductionRequest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddIntroductionRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Date\":\"25 June 2021\",\r\n    \"MessageToIntermediary\":\"Please introduce me to AA\",\r\n    \"MessageToTarget\":\"Please accept me\",\r\n    \"UserRequesterId\":\"1f4819c6-c116-4f8f-86b5-b5aad0ca410e\",\r\n    \"UserIntermediaryId\":\"2d146df9-8699-4365-9d11-65567f6e7aa7\",\r\n    \"UserTargetId\":\"dcbc2c63-bd8e-476b-b0a0-6e38838ca7a8\",\r\n    \"State\":\"AwaitingApproval\",\r\n    \"ConnectionStrength\":\"3\",\r\n    \"TagList\":[\"Medicina\"]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/ir/addIntroductionRequest/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"ir",
+						"addIntroductionRequest",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Date\":\"24 November 2021\",\r\n    \"MessageToIntermediary\":\"Please introduce me to AA\",\r\n    \"MessageToTarget\":\"Please accept me\",\r\n   \"UserRequesterId\":\"0c4187c7-7f03-4bde-8825-d224cd316cd6\",\r\n    \"UserIntermediaryId\":\"66ba58eb-9e6d-4886-bfb1-ecb83e2f88a1\",\r\n    \"UserTargetId\":\"26c4a701-0346-4164-b0e0-90310bbee1e5\",\r\n    \"State\":\"Disapproved\",\r\n    \"ConnectionStrength\":\"3\",\r\n    \"TagList\":[\"26c4a701-0346-4164-b0e0-90310bbee1e5\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/introductionRequest/update/ccd0f335-a558-4543-912d-339fef5b146a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"introductionRequest",
+						"update",
+						"ccd0f335-a558-4543-912d-339fef5b146a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/ir/getAll",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"ir",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserPendingIntroductions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/ir/pendingIntro/dcbc2c63-bd8e-476b-b0a0-6e38838ca7a8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"ir",
+						"pendingIntro",
+						"dcbc2c63-bd8e-476b-b0a0-6e38838ca7a8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

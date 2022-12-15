@@ -1,0 +1,35 @@
+<div *ngIf="user">
+  <h1>{{user.userName.username}}</h1>
+  <div class="about">
+    <div class="aboutMe">
+      <div class="description">
+        <h3>About Me: </h3>
+        <div class="desc">
+          <p>{{user.description.desc}}</p>
+        </div>
+      </div>
+      <br>
+      <p>I've been {{userEmotionalState}} since {{user.emotionalState.date.substr(0, 19).replace('T', ', at ').replace('-', '/').replace('-', '/')}}</p>
+    <div style="margin-top:2% ">
+      <p><strong>Level 1 Network Fortress:</strong> {{totalConnectionStrength}}</p>
+    </div>
+    </div>
+    <div class="moreAboutMe">
+      <h2>More About Me:</h2>
+      <div class="info">
+        <p>Gender: {{userGender}}</p>
+        <p>Birthday: {{user.birthday.birthday.substr(0, 10).replace('-', '/').replace('-', '/')}}</p>
+        <p>Phone Number: {{user.phoneNumber.number}}</p>
+        <p>Address: {{user.address.addr}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="tags">
+    <h2>Tags </h2>
+    <ul>
+      <li *ngFor="let tag of userTags">
+        &nbsp;{{tag}}&nbsp;
+      </li>
+    </ul>
+  </div>
+</div>
